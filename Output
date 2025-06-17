@@ -1,0 +1,136 @@
+Output:
+
++------------------+----------+------+-----+---------+-------+
+| Field            | Type     | Null | Key | Default | Extra |
++------------------+----------+------+-----+---------+-------+
+| A_name           | char(30) | YES  |     | NULL    |       |
+| A_ID             | int      | YES  |     | NULL    |       |
+| Capacity         | int      | YES  |     | NULL    |       |
+| A_weight_in_tons | int      | YES  |     | NULL    |       |
+| Company          | char(15) | YES  |     | NULL    |       |
++------------------+----------+------+-----+---------+-------+
++-------------+------+----------+------------------+----------+
+| A_name      | A_ID | Capacity | A_weight_in_tons | Company  |
++-------------+------+----------+------------------+----------+
+| Airbus_A330 |    1 |      230 |              150 | VISTARA  |
+| Boeing_747  |    2 |      250 |              183 | INDIGO   |
+| Airbus_A320 |    3 |      200 |              199 | EMIRATES |
+| Boeing_737  |    4 |      255 |              215 | VISTARA  |
+| Airbus_A380 |    5 |      225 |              115 | EMIRATES |
++-------------+------+----------+------------------+----------+
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| R_ID           | varchar(10) | YES  |     | NULL    |       |
+| Destination    | char(20)    | YES  |     | NULL    |       |
+| Take_off_point | varchar(10) | YES  |     | NULL    |       |
+| R_TYPE         | char(15)    | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
++------+-------------+----------------+----------------+
+| R_ID | Destination | Take_off_point | R_TYPE         |
++------+-------------+----------------+----------------+
+| R1   | LONDON      | RUNWAY_2       | DIRECT         |
+| R2   | BRAZIL      | RUNWAY_1       | INTERCONNECTED |
+| R3   | DUBAI       | RUNWAY_4       | DIRECT         |
+| R4   | SPAIN       | RUNWAY_3       | INTERCONNECTED |
+| R5   | QATAR       | RUNWAY_5       | INTERCONNECTED |
++------+-------------+----------------+----------------+
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| FLIGHT_ID   | int         | YES  |     | NULL    |       |
+| Departure   | varchar(15) | YES  |     | NULL    |       |
+| Arrival     | varchar(20) | YES  |     | NULL    |       |
+| TIME        | time        | YES  |     | NULL    |       |
+| Flight_Date | varchar(15) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
++-----------+------------+------------+----------+--------------+
+| FLIGHT_ID | Departure  | Arrival    | TIME     | Flight_Date  |
++-----------+------------+------------+----------+--------------+
+|         1 | TERMINAL_3 | TERMINAL_4 | 18:00:00 | 12_JUNE_2024 |
+|         3 | TERMINAL_4 | TERMINAL_1 | 19:30:00 | 24_MAY_2024  |
+|         6 | TERMINAL_1 | TERMINAL_2 | 19:00:00 | 25_MAY_2024  |
+|         5 | TERMINAL_2 | TERMINAL_4 | 17:45:00 | 20_JUNE_2024 |
+|         2 | TERMINAL_3 | TERMINAL_5 | 18:30:00 | 15_JUNE_2024 |
++-----------+------------+------------+----------+--------------+
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Fare_ID       | int         | YES  |     | NULL    |       |
+| Charge_Amount | varchar(50) | YES  |     | NULL    |       |
+| Description   | char(20)    | YES  |     | NULL    |       |
+| Flight_ID     | int         | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
++---------+-----------------------------------------+-----------------+-----------+
+| Fare_ID | Charge_Amount                           | Description     | Flight_ID |
++---------+-----------------------------------------+-----------------+-----------+
+|       2 | 1_LAKH_50_THOUSAND_2_HUNDRED_FIFTY      | COUNTER_BOOKING |         5 |
+|       3 | 1_LAKH_5_THOUSAND_9_HUNDRED_TWENTY_FIVE | ONLINE_BOOKING  |         2 |
+|       1 | 65_THOUSAND                             | ONLINE_BOOKING  |         3 |
+|       4 | 95_THOUSAND                             | COUNTER_BOOKING |         4 |
+|       5 | 1_LAKH_25_THOUSAND                      | ONLINE_BOOKING  |         9 |
++---------+-----------------------------------------+-----------------+-----------+
++----------------+----------+------+-----+---------+-------+
+| Field          | Type     | Null | Key | Default | Extra |
++----------------+----------+------+-----+---------+-------+
+| Passenger_ID   | int      | YES  |     | NULL    |       |
+| Passenger_Name | char(50) | YES  |     | NULL    |       |
+| Age            | int      | YES  |     | NULL    |       |
+| Gender         | char(10) | YES  |     | NULL    |       |
++----------------+----------+------+-----+---------+-------+
++--------------+----------------+------+--------+
+| Passenger_ID | Passenger_Name | Age  | Gender |
++--------------+----------------+------+--------+
+|            1 | Divyang        |   21 | Male   |
+|            2 | Karishma       |   21 | Female |
+|            3 | Prakhar        |   21 | Male   |
+|            4 | Gauri          |   19 | Female |
+|            5 | Ayushi         |   21 | Female |
++--------------+----------------+------+--------+
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| Passenger_ID   | int         | YES  |     | NULL    |       |
+| Passenger_Name | char(50)    | YES  |     | NULL    |       |
+| Age            | int         | YES  |     | NULL    |       |
+| Gender         | char(10)    | YES  |     | NULL    |       |
+| P_address      | varchar(20) | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
++------+-------------+----------------+--------+
+| R_ID | Destination | Take_off_point | R_TYPE |
++------+-------------+----------------+--------+
+| R3   | DUBAI       | RUNWAY_4       | DIRECT |
++------+-------------+----------------+--------+
++------+-------------+----------------+----------------+
+| R_ID | Destination | Take_off_point | R_TYPE         |
++------+-------------+----------------+----------------+
+| R1   | LONDON      | RUNWAY_2       | DIRECT         |
+| R2   | BRAZIL      | RUNWAY_1       | INTERCONNECTED |
+| R3   | DUBAI       | RUNWAY_4       | DIRECT         |
+| R4   | SPAIN       | RUNWAY_3       | INTERCONNECTED |
+| R6   | QATAR       | RUNWAY_5       | INTERCONNECTED |
++------+-------------+----------------+----------------+
++------+-------------+----------------+----------------+
+| R_ID | Destination | Take_off_point | R_TYPE         |
++------+-------------+----------------+----------------+
+| R1   | LONDON      | RUNWAY_2       | DIRECT         |
+| R2   | BRAZIL      | RUNWAY_1       | INTERCONNECTED |
+| R3   | DUBAI       | RUNWAY_4       | DIRECT         |
+| R6   | QATAR       | RUNWAY_5       | INTERCONNECTED |
++------+-------------+----------------+----------------+
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| R_ID           | varchar(10) | YES  |     | NULL    |       |
+| Destination    | char(20)    | YES  |     | NULL    |       |
+| Take_off_point | varchar(10) | YES  |     | NULL    |       |
+| R_TYPE         | char(15)    | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| R_ID           | varchar(10) | YES  |     | NULL    |       |
+| Destination    | char(20)    | YES  |     | NULL    |       |
+| Take_off_point | varchar(10) | YES  |     | NULL    |       |
+| R_TYPE         | char(15)    | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
