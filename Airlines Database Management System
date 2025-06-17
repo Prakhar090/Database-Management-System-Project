@@ -1,0 +1,69 @@
+create table aeroplane(A_name char(30),
+A_ID int(10),
+Capacity int(255),
+A_weight_in_tons int(255),
+Company char(15));
+desc aeroplane; 
+insert into aeroplane values('Airbus_A330',01,230,150,'VISTARA');
+insert into aeroplane values('Boeing_747',02,250,183,'INDIGO');
+insert into aeroplane values('Airbus_A320',03,200,199,'EMIRATES');
+insert into aeroplane values('Boeing_737',04,255,215,'VISTARA');
+insert into aeroplane values('Airbus_A380',05,225,115,'EMIRATES');
+select * from aeroplane;
+create table route(R_ID varchar(10),
+Destination char(20),
+Take_off_point varchar(10),
+R_TYPE char(15));
+desc route;
+insert into route values('R1','LONDON','RUNWAY_2','DIRECT');
+insert into route values('R2','BRAZIL','RUNWAY_1','INTERCONNECTED');
+insert into route values('R3','DUBAI','RUNWAY_4','DIRECT');
+insert into route values('R4','SPAIN','RUNWAY_3','INTERCONNECTED');
+insert into route values('R5','QATAR','RUNWAY_5','INTERCONNECTED');
+select * from route;
+create table flight(FLIGHT_ID int(10),
+Departure varchar(15),
+Arrival varchar(20),
+TIME time,
+Flight_Date varchar(15));
+desc flight;
+insert into flight values(01,'TERMINAL_3','TERMINAL_4','18:00:00','12_JUNE_2024');
+insert into flight values(03,'TERMINAL_4','TERMINAL_1','19:30:00','24_MAY_2024');
+insert into flight values(06,'TERMINAL_1','TERMINAL_2','19:00:00','25_MAY_2024');
+insert into flight values(05,'TERMINAL_2','TERMINAL_4','17:45:00','20_JUNE_2024');
+insert into flight values(02,'TERMINAL_3','TERMINAL_5','18:30:00','15_JUNE_2024');
+select * from flight;
+create table AirFare(Fare_ID int(10),
+Charge_Amount varchar(50),
+Description char(20), 
+Flight_ID int(10));
+desc AirFare;
+insert into AirFare values(02,'1_LAKH_50_THOUSAND_2_HUNDRED_FIFTY','COUNTER_BOOKING',05);
+insert into AirFare values(03,'1_LAKH_5_THOUSAND_9_HUNDRED_TWENTY_FIVE','ONLINE_BOOKING',02);
+insert into AirFare values(01,'65_THOUSAND','ONLINE_BOOKING',03);
+insert into AirFare values(04,'95_THOUSAND','COUNTER_BOOKING',04);
+insert into AirFare values(05,'1_LAKH_25_THOUSAND','ONLINE_BOOKING',09);
+select * from AirFare;
+create table Passenger(Passenger_ID int(10),
+Passenger_Name char(50),
+Age int(50), 
+Gender char(10));
+desc Passenger;
+insert into Passenger values(01,'Divyang',21,'Male');
+insert into Passenger values(02,'Karishma',21,'Female');
+insert into Passenger values(03,'Prakhar',21,'Male');
+insert into Passenger values(04,'Gauri',19,'Female');
+insert into Passenger values(05,'Ayushi',21,'Female');
+select * from Passenger;
+alter table Passenger add(P_address varchar(20));
+desc Passenger;
+select * from route where r_id = 'R3';
+update ROUTE set R_ID ='R6' where R_id='R5';
+select * from ROUTE;
+delete from ROUTE where R_Id='R4';
+select * from ROUTE;
+truncate ROUTE;
+desc ROUTE;
+select * from ROUTE;
+desc route;
+drop table route ;
